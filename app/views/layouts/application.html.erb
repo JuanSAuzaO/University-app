@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tech university</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <%= link_to 'Tech university', root_path, class:"brand-logo right" %>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><%= link_to 'Courses', '#' %></li>
+            <li><%= link_to 'Enrollment', '#' %></li>
+            <li><%= link_to 'Account', '#' %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
